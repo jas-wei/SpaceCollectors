@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class DraggableBaggie : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private Canvas canvas;
-    private RectTransform rectTransform;
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public ItemBaggie itemBaggie;
+
+    private RectTransform rectTransform;
     public Image image;
     public int score;
+    public TMP_Text scoreText;
 
     void Start(){
         canvas = GameObject.FindGameObjectWithTag("SpaceShipCanvas").GetComponent<Canvas>();
@@ -24,6 +27,7 @@ public class DraggableBaggie : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         itemBaggie = newItemBaggie;
         image.sprite = newItemBaggie.image;
         score = newItemBaggie.score;
+        RefreshScore();
     } 
 
     public int GetItemValue(ItemBaggie itemBaggie){
@@ -52,6 +56,10 @@ public class DraggableBaggie : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         //Debug.Log("End Drag");
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+    }
+
+    public void RefreshScore(){
+        scoreText.text = score.ToString();
     }
 }
 

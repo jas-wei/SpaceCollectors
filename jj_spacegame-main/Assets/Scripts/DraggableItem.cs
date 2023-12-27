@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private Canvas canvas;
-    private RectTransform rectTransform;
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public Item item;
+    // [HideInInspector] public int score = 0;
+
+    private RectTransform rectTransform;
+    public TMP_Text scoreText;
     public Image image;
 
     void Start(){
@@ -22,6 +26,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         item = newItem;
         image.sprite = newItem.image;
+        RefreshScore(newItem);
     } 
 
     public int GetItemValue(Item item){
@@ -50,5 +55,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         //Debug.Log("End Drag");
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+    }
+
+    public void RefreshScore(Item newItem){
+        int newItemPoints = (int)newItem.points;
+        scoreText.text = newItemPoints.ToString();
     }
 }

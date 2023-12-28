@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class TimerScript : MonoBehaviour
             SetTimerText(time);
             timerText.color = Color.red;
             enabled = false;
+            SceneManager.LoadSceneAsync(3);
         }
         SetTimerText(time);
     }

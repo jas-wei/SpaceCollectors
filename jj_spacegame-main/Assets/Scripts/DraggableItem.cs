@@ -26,7 +26,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         item = newItem;
         image.sprite = newItem.image;
-        RefreshScore(newItem);
+        RefreshName(newItem);
     } 
 
     public int GetItemValue(Item item){
@@ -57,8 +57,14 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = true;
     }
 
-    public void RefreshScore(Item newItem){
-        int newItemPoints = (int)newItem.points;
-        scoreText.text = newItemPoints.ToString();
+    
+    public void RefreshName(Item newItem){
+        scoreText.text = image.ToString();// its gonna be the name of the sprite
+        Debug.Log(image.sprite.name.ToString());
     }
+
+    // public void RefreshScore(Item newItem){
+    //     int newItemPoints = (int)newItem.points;
+    //     scoreText.text = newItemPoints.ToString();
+    // }
 }

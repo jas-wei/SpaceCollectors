@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760f95787be48964b91fb9c0bad3e58c, type: 3}
   m_Name: tile
   m_EditorClassIdentifier: 
-  title: {fileID: 0}
   points: 20
-  image: {fileID: 21300000, guid: 35f23c48db908de47a926c4bb1831818, type: 3}
+  image: {fileID: 21300000, guid: eeadb7cea63166b45b1b9d098a02b3c1, type: 3}

@@ -1457,9 +1457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b152f6e123fd0a4cbc1d6b9ab710d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  spaceShipInventoryManager: {fileID: 156642706}
   timerText: {fileID: 232511421}
-  currentTime: 65
+  currentTime: 5
   countDown: 1
   hasLimit: 1
   timerLimit: 0
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 520288561}
   m_Layer: 3
   m_Name: zoneGuide
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4128,7 +4128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.0400085, y: 1.8200073}
+  m_AnchoredPosition: {x: -7.0400085, y: 1}
   m_SizeDelta: {x: -81.52, y: -71.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097889524

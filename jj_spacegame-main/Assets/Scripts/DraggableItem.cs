@@ -59,8 +59,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     
     public void RefreshName(Item newItem){
-        scoreText.text = image.ToString();// its gonna be the name of the sprite
-        Debug.Log(image.sprite.name.ToString());
+        scoreText.text = image.sprite.name.ToString();// its gonna be the name of the sprite
+        // Debug.Log(image.sprite.name.ToString());
     }
 
     // public void RefreshScore(Item newItem){

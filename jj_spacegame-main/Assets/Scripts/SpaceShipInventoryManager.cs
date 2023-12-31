@@ -8,7 +8,12 @@ public class SpaceShipInventoryManager : MonoBehaviour
     public GameObject inventoryBaggiePrefab;
     public DraggableBaggie draggableBaggie;
 
-    public int total = 0;
+    public static int total;
+
+    void Start()
+    {
+        total = 0;
+    }
 
     public void AddItem(ItemBaggie itemBaggie){
         DraggableBaggie itemInSlot = inventorySlot.GetComponentInChildren<DraggableBaggie>();

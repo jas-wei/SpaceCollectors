@@ -10,7 +10,7 @@ public class TimerScript : MonoBehaviour
 {
     [Header("Total Tally")]
     // public GameManager gameManager;
-    public GameObject spaceShipInventoryManager;
+    // public GameObject spaceShipInventoryManager;
     private int total;
 
     [Header("Component")]
@@ -47,7 +47,8 @@ public class TimerScript : MonoBehaviour
             timerText.color = Color.red;
             enabled = false;
 
-            int total = spaceShipInventoryManager.GetComponent<SpaceShipInventoryManager>().total;
+            // int total = spaceShipInventoryManager.GetComponent<SpaceShipInventoryManager>().total;
+            int total = SpaceShipInventoryManager.total;
             Debug.Log("total in timer is" + total);
             // GetEndScreen(total);
             SceneManager.LoadScene("CutScene2");

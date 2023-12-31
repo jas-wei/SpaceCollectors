@@ -15,7 +15,7 @@ public class Rocket : MonoBehaviour
     public InventoryManager inventoryManager;
     public GameObject inventoryGroupParent;
 
-    public int total = 0;
+    // public int total = 0;
     
 
     //public InventoryController inventoryController;
@@ -56,7 +56,7 @@ public class Rocket : MonoBehaviour
 
                 if (inventoryIsOpen == false && itemInSlot != null) {
                     spaceShipInventoryManager.AddTotal(-1 * spaceShipInventoryManager.GetStartSlotValue());
-                    Debug.Log("total after subtracting is " + spaceShipInventoryManager.total);
+                    Debug.Log("total after subtracting is " + SpaceShipInventoryManager.total);
                     // inventoryManager.score = 0;
 
                     Destroy(itemInSlot.gameObject);

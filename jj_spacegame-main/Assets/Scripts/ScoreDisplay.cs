@@ -6,10 +6,10 @@ using TMPro;
 public class ScoreDisplay : MonoBehaviour
 {
     public TMP_Text totalText;
-    public Rocket rocket;
     
     void Start()
     {
-        totalText.text = "Total Score is: " + rocket.total.ToString();
+        int spaceShipTotal = SpaceShipInventoryManager.total;
+        totalText.text = "Total Score is: " + spaceShipTotal.ToString();
     }
 }

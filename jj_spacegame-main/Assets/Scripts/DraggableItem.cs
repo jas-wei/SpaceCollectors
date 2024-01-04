@@ -14,6 +14,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private RectTransform rectTransform;
     public TMP_Text scoreText;
+    public TMP_Text nameText;
     public Image image;
 
     void Start(){
@@ -27,6 +28,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         item = newItem;
         image.sprite = newItem.image;
         RefreshName(newItem);
+        RefreshScore(newItem);
     } 
 
     public int GetItemValue(Item item){
@@ -59,12 +61,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     
     public void RefreshName(Item newItem){
-        scoreText.text = image.sprite.name.ToString();// its gonna be the name of the sprite
+        nameText.text = image.sprite.name.ToString();// its gonna be the name of the sprite
         // Debug.Log(image.sprite.name.ToString());
     }
 
-    // public void RefreshScore(Item newItem){
-    //     int newItemPoints = (int)newItem.points;
-    //     scoreText.text = newItemPoints.ToString();
-    // }
+    public void RefreshScore(Item newItem){
+        int newItemPoints = (int)newItem.points;
+        scoreText.text = newItemPoints.ToString();
+    }
 }

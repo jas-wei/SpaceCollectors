@@ -591,7 +591,6 @@ MonoBehaviour:
   inventorySlot: {fileID: 1553835595}
   inventoryBaggiePrefab: {fileID: 6614518048250295440, guid: 27e1bc61f0c07394aa9ad73833d2652b, type: 3}
   draggableBaggie: {fileID: -4283985294435354790, guid: 27e1bc61f0c07394aa9ad73833d2652b, type: 3}
-  total: 0
 --- !u!1001 &200408620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1030,7 +1029,6 @@ MonoBehaviour:
   spaceShipInventoryManager: {fileID: 156642708}
   inventoryManager: {fileID: 1655427845}
   inventoryGroupParent: {fileID: 1787794851}
-  total: 0
 --- !u!1 &294792217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,9 +1455,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b152f6e123fd0a4cbc1d6b9ab710d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spaceShipInventoryManager: {fileID: 156642706}
   timerText: {fileID: 232511421}
-  currentTime: 5
+  currentTime: 180
   countDown: 1
   hasLimit: 1
   timerLimit: 0
@@ -1870,13 +1867,13 @@ GameObject:
   - component: {fileID: 520288558}
   - component: {fileID: 520288560}
   - component: {fileID: 520288561}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: zoneGuide
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &520288558
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1942,11 +1939,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1921118639
-  m_SortingLayer: 1
+  m_SortingLayerID: 1680697517
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8518ff3b21258824abb0fb509567f105, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.15686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6780,7 +6777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2115610140}
-  - component: {fileID: 2115610139}
+  - component: {fileID: 2115610141}
   m_Layer: 0
   m_Name: Instance Manager
   m_TagString: Untagged
@@ -6788,18 +6785,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2115610139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115610138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a44bc841d206c79489281700deaba6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2115610140
 Transform:
   m_ObjectHideFlags: 0
@@ -6815,6 +6800,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2115610141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115610138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac02a2bae4fe1649a7eb0cf43e0981b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zShipSize: 4
+  zOneSize: 8
+  zTwoSize: 16
+  zThreeSize: 21
+  zFourSize: 30
+  zOneTimer: 2
+  zTwoTimer: 4
+  zThreeTimer: 8
+  zFourTimer: 16
+  zOneList:
+  - {fileID: 6751167938350868722, guid: eeb82981314ecf8478bdc1aad95e9994, type: 3}
+  - {fileID: 7556631779309131698, guid: 6904f90dc91a4b24bb2ae7f957c4be3d, type: 3}
+  - {fileID: 7556631779309131698, guid: c8a04972112e2ed4a83eed00c1285d81, type: 3}
+  zTwoList:
+  - {fileID: 2663828045473072884, guid: da6c7f51c105b5847a0182b2f6f1cbe8, type: 3}
+  - {fileID: 7021455778812250292, guid: 73ae82de8eb256548853dcec5ea3df68, type: 3}
+  - {fileID: 8473940220246997342, guid: db2fc69654c3e5246b5bee74d35eaa66, type: 3}
+  zThreeList:
+  - {fileID: 1386053684532439770, guid: 9521de09fb3170649869c401fd2bceaf, type: 3}
+  - {fileID: 1987522076086951909, guid: c7626d28292d59c4288caf5e9cf21f23, type: 3}
+  - {fileID: 7004969099203543732, guid: 34def2f757a36b54cb089b6894518b2e, type: 3}
+  zFourList:
+  - {fileID: 1386053684532439770, guid: 9521de09fb3170649869c401fd2bceaf, type: 3}
+  - {fileID: 1987522076086951909, guid: c7626d28292d59c4288caf5e9cf21f23, type: 3}
+  - {fileID: 7004969099203543732, guid: 34def2f757a36b54cb089b6894518b2e, type: 3}
+  test: {fileID: 0}
 --- !u!1 &2123444098
 GameObject:
   m_ObjectHideFlags: 0
@@ -7148,6 +7171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower Debris
       objectReference: {fileID: 0}
+    - target: {fileID: 7556631779309131698, guid: 6904f90dc91a4b24bb2ae7f957c4be3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7164,6 +7191,10 @@ PrefabInstance:
     - target: {fileID: 6327737717216979059, guid: 3b8a197fe778c5b4d8599469b47d14bd, type: 3}
       propertyPath: m_Name
       value: Tile Debris
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327737717216979059, guid: 3b8a197fe778c5b4d8599469b47d14bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8552303991550025909, guid: 3b8a197fe778c5b4d8599469b47d14bd, type: 3}
       propertyPath: m_Pivot.x

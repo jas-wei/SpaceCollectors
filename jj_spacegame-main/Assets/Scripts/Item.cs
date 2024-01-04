@@ -11,7 +11,7 @@ public class Item : ScriptableObject
 }
 
 public enum Points {
-    low = 1,
-    medium = 100, 
-    high = 10000 
+    low = 10,
+    medium = 25, 
+    high = 50 
 }

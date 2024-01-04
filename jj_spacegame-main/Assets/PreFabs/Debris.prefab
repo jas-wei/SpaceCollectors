@@ -169,7 +169,13 @@ MonoBehaviour:
   itemToPickup:
   - {fileID: 11400000, guid: 5c525aa75743e70498b79cda2e9ef3aa, type: 2}
   - {fileID: 11400000, guid: ae84e7d513de93640a10f8e5b617a552, type: 2}
-  draggableItem: {fileID: 5771203003085568078, guid: 590a404ca12f1014e9015cdeb0b06fcf, type: 3}
+  - {fileID: 11400000, guid: fbe0721bfa590c04781a24b80c319713, type: 2}
+  - {fileID: 11400000, guid: e7c491d126537e143b9cc6f946a384b5, type: 2}
+  - {fileID: 11400000, guid: fe83af4ca8bca9b479d0ed6d0a7d31c5, type: 2}
+  - {fileID: 11400000, guid: f7dc3ad2e020c8b478fc764e166748a6, type: 2}
+  - {fileID: 11400000, guid: f81839e7d9c8bd54db497cd829e1c299, type: 2}
+  - {fileID: 11400000, guid: 01f5e39356070684580abb1bf729b77a, type: 2}
+  - {fileID: 11400000, guid: d4a37e44d4dcc4e47b755ee4e9f174e7, type: 2}
 --- !u!1001 &6921713302520116669
 PrefabInstance:
   m_ObjectHideFlags: 0

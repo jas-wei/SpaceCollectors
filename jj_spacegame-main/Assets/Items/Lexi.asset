@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 760f95787be48964b91fb9c0bad3e58c, type: 3}
-  m_Name: tile
+  m_Name: Lexi
   m_EditorClassIdentifier: 
-  points: 20
-  image: {fileID: 21300000, guid: eeadb7cea63166b45b1b9d098a02b3c1, type: 3}
+  points: 50
+  image: {fileID: 21300000, guid: 0ff5ffbe2c1911f459ea4b156c82871a, type: 3}

@@ -22,13 +22,28 @@ public class Debris : MonoBehaviour
         interactable = gameObject.transform.GetChild(0).gameObject.GetComponent<Interactable>();
         inventoryManager = GameObject.FindWithTag("InventoryManager").GetComponent<InventoryManager>();
         startSlot = inventoryGroupParent.transform.GetChild(0).GetChild(2).GetChild(0).gameObject.GetComponent<InventorySlot>();
+        Debug.Log("Debris name is " + gameObject.name);
 
-        if (gameObject.CompareTag("TileDebris")){ 
+        if (gameObject.name == "Homework Debris Variant(Clone)"){ 
             //Debug.Log("TileDebris Tag");
             id = 0;
-        } else if (gameObject.CompareTag("FlowerDebris")){
+        } else if (gameObject.name == "Flower Debris Variant(Clone)"){
             id = 1;
-        }
+        } else if (gameObject.name == "Breakfast Debris Variant(Clone)"){
+            id = 2;
+        } else if (gameObject.name == "Graduation Debris Variant(Clone)"){
+            id = 3;
+        } else if (gameObject.name == "Trophy Debris Variant(Clone)"){
+            id = 4;
+        } else if (gameObject.name == "Ultraman Debris Variant(Clone)"){
+            id = 5;
+        } else if (gameObject.name == "Wedding Debris Variant(Clone)"){
+            id = 6;
+        } else if (gameObject.name == "Lexi Debris Variant(Clone)"){
+            id = 7;
+        } else if (gameObject.name == "Grandma Debris Variant(Clone)"){
+            id = 8;
+        } 
     }
 
 
@@ -46,11 +61,14 @@ public class Debris : MonoBehaviour
                 inventoryIsOpen = false;
 
                 DraggableItem itemInSlot = startSlot.GetComponentInChildren<DraggableItem>();
+
                 if (inventoryIsOpen == false && itemInSlot != null) {
                     inventoryManager.AddScore(-1 * inventoryManager.GetStartSlotValue());
                     Debug.Log("score after subtracting is " + inventoryManager.score);
                     
                     Destroy(itemInSlot.gameObject);
+                } else{
+                    Destroy(gameObject);
                 }
                 
             }

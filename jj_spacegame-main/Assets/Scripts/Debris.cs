@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Debris : MonoBehaviour
 {
+    [Header("Debris Interaction")]
     private GameObject inventoryGroupParent;
     private Interactable interactable;
     public bool inventoryIsOpen;
 
+    [Header("Spawning Item")]
+    public Item[] itemToPickup;
     private int id;
     private InventoryManager inventoryManager;
-    public Item[] itemToPickup;
-    // public DraggableItem draggableItem;
-    // public InventoryController inventoryController;
-
     private InventorySlot startSlot;
 
 
@@ -22,10 +21,8 @@ public class Debris : MonoBehaviour
         interactable = gameObject.transform.GetChild(0).gameObject.GetComponent<Interactable>();
         inventoryManager = GameObject.FindWithTag("InventoryManager").GetComponent<InventoryManager>();
         startSlot = inventoryGroupParent.transform.GetChild(0).GetChild(2).GetChild(0).gameObject.GetComponent<InventorySlot>();
-        Debug.Log("Debris name is " + gameObject.name);
 
         if (gameObject.name == "Homework Debris Variant(Clone)"){ 
-            //Debug.Log("TileDebris Tag");
             id = 0;
         } else if (gameObject.name == "Flower Debris Variant(Clone)"){
             id = 1;

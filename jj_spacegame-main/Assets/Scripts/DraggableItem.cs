@@ -7,12 +7,13 @@ using TMPro;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [Header("Drag Item")]
     [SerializeField] private Canvas canvas;
+    [SerializeField] private RectTransform rectTransform;
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public Item item;
-    // [HideInInspector] public int score = 0;
 
-    private RectTransform rectTransform;
+    [Header("Item Details")]
     public TMP_Text scoreText;
     public TMP_Text nameText;
     public Image image;

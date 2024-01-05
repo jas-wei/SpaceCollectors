@@ -7,11 +7,13 @@ using TMPro;
 
 public class DraggableBaggie : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [Header("Drag Baggie")]
     [SerializeField] private Canvas canvas;
+    [SerializeField] private RectTransform rectTransform;
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public ItemBaggie itemBaggie;
-
-    private RectTransform rectTransform;
+    
+    [Header("Baggie Details")]
     public Image image;
     public int score;
     public TMP_Text scoreText;

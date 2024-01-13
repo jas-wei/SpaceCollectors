@@ -20,7 +20,7 @@ public class Debris : MonoBehaviour
         inventoryGroupParent = GameObject.FindWithTag("InventoryGroup");
         interactable = gameObject.transform.GetChild(0).gameObject.GetComponent<Interactable>();
         inventoryManager = GameObject.FindWithTag("InventoryManager").GetComponent<InventoryManager>();
-        startSlot = inventoryGroupParent.transform.GetChild(0).GetChild(2).GetChild(0).gameObject.GetComponent<InventorySlot>();
+        startSlot = inventoryGroupParent.transform.GetChild(0).GetChild(3).GetChild(0).gameObject.GetComponent<InventorySlot>();
 
         if (gameObject.name == "Homework Debris Variant(Clone)"){ 
             id = 0;

@@ -37,7 +37,7 @@ public class Rocket : MonoBehaviour
                     spaceShipInventoryManager.AddItem(itemBaggie);
 
                     for (int i = 0; i < 9; i++) {
-                        InventorySlot inventorySlot = inventoryGroupParent.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(i).gameObject.GetComponent<InventorySlot>();
+                        InventorySlot inventorySlot = inventoryGroupParent.transform.GetChild(0).GetChild(2).GetChild(0).GetChild(i).gameObject.GetComponent<InventorySlot>();
                         DraggableItem itemInInventorySlot = inventorySlot.GetComponentInChildren<DraggableItem>();
                         // Debug.Log("item in inventory slot " + itemInInventorySlot);
 

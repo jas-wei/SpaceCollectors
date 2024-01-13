@@ -36,6 +36,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         return (int)item.points;
     }
 
+    // public int GetItemGrade(Item item){
+    //     return item.points;
+    // }
+
     private void Awake(){
         rectTransform = GetComponent<RectTransform>();
     }

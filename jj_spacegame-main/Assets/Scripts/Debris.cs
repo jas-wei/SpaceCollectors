@@ -15,12 +15,18 @@ public class Debris : MonoBehaviour
     private InventoryManager inventoryManager;
     private InventorySlot startSlot;
 
+    SpriteRenderer spriteRenderer;
+    public float fadeTimer = 3f;
 
     void Start () {
         inventoryGroupParent = GameObject.FindWithTag("InventoryGroup");
         interactable = gameObject.transform.GetChild(0).gameObject.GetComponent<Interactable>();
         inventoryManager = GameObject.FindWithTag("InventoryManager").GetComponent<InventoryManager>();
-        startSlot = inventoryGroupParent.transform.GetChild(0).GetChild(3).GetChild(0).gameObject.GetComponent<InventorySlot>();
+        startSlot = inventoryGroupParent.transform.GetChild(0).GetChild(2).GetChild(0).gameObject.GetComponent<InventorySlot>();
+
+        // fade stuff
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine(FadeOut(fadeTimer));
 
         if (gameObject.name == "Homework Debris Variant(Clone)"){ 
             id = 0;
@@ -70,5 +76,24 @@ public class Debris : MonoBehaviour
                 
             }
         }
+    }
+
+    IEnumerator FadeOut(float fadeTimer)
+    {
+        yield return new WaitForSeconds(fadeTimer);
+        Color c = spriteRenderer.material.color;
+        for (float alpha = 1f; alpha >= -0.05f; alpha -= 0.05f)
+        {
+            c.a = alpha;
+            spriteRenderer.material.color = c;
+            //Debug.Log("f is " + alpha);
+            yield return new WaitForSeconds(0.1f);
+        }
+        // Destroy(gameObject);
+        if (inventoryIsOpen == false){
+            Object.Destroy(this.gameObject);
+        }
+        
+        // Debug.Log("object destroeyed");
     }
 }

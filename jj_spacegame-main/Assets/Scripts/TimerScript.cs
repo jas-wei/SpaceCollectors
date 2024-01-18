@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class TimerScript : MonoBehaviour
 {
     [Header("Total Tally")]
-    // public GameManager gameManager;
+    public GameManager gameManager;
     // public GameObject spaceShipInventoryManager;
     private int total;
 
@@ -64,6 +64,7 @@ public class TimerScript : MonoBehaviour
 
     IEnumerator CountdownToStart()
     {
+        Time.timeScale = 0;
         while(countdownTime > 0)
         {
             countdownDisplay.text = countdownTime.ToString();

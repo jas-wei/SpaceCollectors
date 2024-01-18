@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class QuitButton : MonoBehaviour
 {
     public void QuitGame(){
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadScene("MainMenu");
     }
 }

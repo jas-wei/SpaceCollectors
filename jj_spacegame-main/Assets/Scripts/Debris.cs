@@ -31,6 +31,7 @@ public class Debris : MonoBehaviour
         if (gameObject.name == "Homework Debris Variant(Clone)"){ 
             id = 0;
         } else if (gameObject.name == "Flower Debris Variant(Clone)"){
+            // Debug.Log("flower");
             id = 1;
         } else if (gameObject.name == "Breakfast Debris Variant(Clone)"){
             id = 2;
@@ -90,10 +91,10 @@ public class Debris : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         // Destroy(gameObject);
-        if (inventoryIsOpen == false){
-            Object.Destroy(this.gameObject);
+        while (inventoryIsOpen) {
+            yield return new WaitForSeconds(0.1f);
         }
-        
+        Object.Destroy(this.gameObject);
         // Debug.Log("object destroeyed");
     }
 }
